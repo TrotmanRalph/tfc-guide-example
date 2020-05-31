@@ -32,3 +32,8 @@ resource "aws_dynamodb_table" "tfc_example_table" {
     user_name = var.tag_user_name
   }
 }
+
+module "s3-webapp" {
+  source  = "app.terraform.io/test_rstrotman_org/s3-webapp/aws"
+  version = "1.0.0"
+}
