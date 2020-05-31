@@ -36,7 +36,7 @@ resource "aws_dynamodb_table" "tfc_example_table" {
 module "s3-webapp" {
   source  = "app.terraform.io/test_rstrotman_org/s3-webapp/aws"
   version = "1.0.0"
-  name= "3731dz"
+  name= "37311dz"
   prefix= "rst"
   region=var.aws_region
   
