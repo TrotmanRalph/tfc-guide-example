@@ -1,9 +1,6 @@
 provider "aws" {
   version = "2.33.0"
   region = var.aws_region
-  access_key = ${{ secrets.AWS_ACCESS_KEY_ID }}
-  secret_key = ${{ secrets.AWS_SECRET_ACCCESS_KEY }}
-
 }
 
 provider "random" {
