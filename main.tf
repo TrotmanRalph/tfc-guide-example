@@ -15,7 +15,7 @@ terraform {
 
     # The name of the Terraform Cloud workspace to store Terraform state files in.
     workspaces {
-      name = "tfc-guide-example"
+      name = "github-test-01"
     }
   }
 }
