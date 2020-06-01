@@ -8,6 +8,19 @@ provider "random" {
   version = "2.2"
 }
 
+  terraform {
+       backend "remote" {
+       # The name of your Terraform Cloud organization.
+         organization = "test_rstrotman_org"
+
+         # The name of the Terraform Cloud workspace to store Terraform state files in.
+         workspaces {
+           name = "tfc-guide-example"
+         }
+     }
+  }
+
+
 resource "random_pet" "table_name" {}
 
 resource "aws_dynamodb_table" "tfc_example_table" {
@@ -31,13 +44,4 @@ resource "aws_dynamodb_table" "tfc_example_table" {
   tags = {
     user_name = var.tag_user_name
   }
-}
-
-module "s3-webapp" {
-  source  = "app.terraform.io/test_rstrotman_org/s3-webapp/aws"
-  version = "1.0.2"
-  name= "37311dz"
-  prefix= "rst"
-  region=var.aws_region
-  
 }
