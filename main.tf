@@ -1,5 +1,6 @@
 provider "aws" {
   version = "2.33.0"
+
   region = var.aws_region
 }
 
@@ -14,7 +15,7 @@ terraform {
 
     # The name of the Terraform Cloud workspace to store Terraform state files in.
     workspaces {
-      name = "github-test-01"
+      name = "tfc-guide-example"
     }
   }
 }
