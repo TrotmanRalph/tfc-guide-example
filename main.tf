@@ -9,15 +9,15 @@ provider "random" {
 }
 
 terraform {
-    backend "remote" {
+  backend "remote" {
     # The name of your Terraform Cloud organization.
-        organization = "test_rstrotman_org"
+    organization = "test_rstrotman_org"
 
-        # The name of the Terraform Cloud workspace to store Terraform state files in.
-        workspaces {
-        name = "tfc-guide-example"
-        }
+    # The name of the Terraform Cloud workspace to store Terraform state files in.
+    workspaces {
+      name = "tfc-guide-example"
     }
+  }
 }
 
 
@@ -44,3 +44,4 @@ resource "aws_dynamodb_table" "tfc_example_table" {
   tags = {
     user_name = var.tag_user_name
   }
+}
